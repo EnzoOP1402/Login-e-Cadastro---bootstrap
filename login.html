@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>Bem vindo de volta! - Login</title>
+    <style>
+        /*Definindo as fontes*/
+        @font-face {
+            font-family: 'Circe';
+            src: url('fontes/Circe/Circe-Bold.otf') format('opentype');
+        }
+        /* <uniquifier>: Use a unique and descriptive class name
+         <weight>: Use a value from 200 to 1000*/
+        .nunito {
+            font-family: "Nunito", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        *{
+            margin-bottom: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+        }
+        h1{
+            font-family: Circe, sans-serif;
+        }
+        label{
+            font-weight: bold;
+        }
+        .R1{
+            height: 100vh;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .t1{
+            color: #f9f9f9;
+            text-shadow: 2px 2px 1px #7ac143;
+        }
+        .t2{
+            color: #05440f;
+            text-shadow: 2px 2px 1px rgba(5, 68, 16, 0.75);
+        }
+        .img-form{
+            width: 50px;
+        }
+        .img-logo{
+            width: 300px;
+        }
+        .areaPrincipal{
+            height: 100vh;
+            width: 100%;
+        }
+        .imgArea{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #3a7d44;
+        }
+        .linhaB{
+            border-bottom: 1px solid black;
+        }
+        .linhaT{
+            border-top: 1px solid black;
+        }
+        .linhaL{
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+        .contForm{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .btnGoogle{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 50px;
+            border: 1px solid #a6a6a6;
+        }
+        #icone{
+            width: 80px;
+        }
+
+        .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback){
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+            
+        /*---------- BUTTON ----------*/
+
+        .btn-entrar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            cursor: pointer;
+            position: relative;
+            padding: 10px 24px;
+            font-size: 18px;
+            color: black;
+            background-color: #3A7D44;
+            border: 2px solid #7AC143;
+            border-radius: 34px;
+            background-color: transparent;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            overflow: hidden;
+        }
+        
+        .button::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 50px;
+            height: 50px;
+            border-radius: inherit;
+            scale: 0;
+            z-index: -1;
+            background-color: #7AC143;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+        
+        .button:hover::before {
+            scale: 3;
+        }
+        
+        .button:hover {
+            color: #212121;
+            scale: 1.1;
+            box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+        }
+        
+        .button:active {
+            scale: 1;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="areaPrincipal">
+        <div class="row R1">
+            <!--Área da imagem-->
+            <div class="d-none d-lg-block col-lg-5 px-5 imgArea">
+                <div class="container text-center center">
+                    <h1 class="display-4 py-5 t1">
+                        BEM VINDO DE VOLTA!
+                    </h1>
+                </div>
+                <img class="img-fluid img-form" src="midia/imgLogin.png" alt="Imagem de duas mulheres plantando uma muda em uma garrafa plástica">
+                    <img class="img-fluid py-5 img-logo" src="midia/logo.ico" alt="Logo EcoMoment">
+            </div>
+
+            <!--Área do formulário-->
+            <div class="col-12 col-lg-7 px-5 formArea">
+                <div class="row pt-5">
+                    <div class="col-4 linhaB"></div>
+                    <div class="col-4 center text-center">
+                        <h1 class="display-4 t2">
+                            LOGIN
+                        </h1>
+                    </div>
+                    <div class="col-4 linhaB"></div>
+                </div>
+                <div class="row py-4 linhaL center">
+                    <div class="col-1"></div>
+                    <div class="col-10 center nunito">
+                        <button class="btnGoogle py-2 px-3">
+                            <img src="midia/pesquisa.png" alt="Logo Google" class="img-fluid">
+                            <span class="px-2"></span>
+                            Continuar com Google
+                        </button>
+                        <span class="text-center">ou</span>
+                        <form class="needs-validation" novalidate>
+                            <label for="modal-email" class="form-label">E-mail / nome de usuário:</label>
+                            <div class="mb-4 input-group">
+                                <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                                <input type="email" class="form-control" id="modal-email" required>
+                                <div class="invalid-feedback">Insira seu e-mail para continuar</div>
+                            </div>
+        
+                            <label for="modal-senha" class="form-label">Senha:</label>
+                            <div class="mb-4 input-group">
+                                <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                <input type="password" class="form-control" id="modal-senha" placeholder="Mínimo de 8 caracteres" required>
+                                <div class="invalid-feedback">Insira sua senha para continuar</div>
+                            </div>
+
+                            <div class="btn-entrar">
+                                <button class="button" type="submit">Entrar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row pb-5">
+                    <div class="col-5 linhaT"></div>
+                    <div class="col-2 center">
+                        <img id="icone" src="midia/reciclagem-icone.png" alt="Símbolo da recilagem" class="img-fluid">
+                    </div>
+                    <div class="col-5 linhaT"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript"> //Para as validações
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+    </script>
+</body>
+</html>
